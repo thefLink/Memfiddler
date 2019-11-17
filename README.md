@@ -1,12 +1,14 @@
 # Memfiddler
 
-Executes shellcode from a remote server and aims to evade in-memory scanners
+Executes shellcode from a remote server and aims to hide it from blue teamers and memory scanners running periodically.     
+
+It is not meant to (and does not) bypass an AV. It's sole purpose is to hide from the blueteam which might be checking the content of RWX pages.     
+Whether you are initially flagged or not depends on the shellcode you execute. :-) 
 
 ## Description
 Memfiddler downloads shellcode from a remote server and executes it in a seperate thread.    
 
-It aims to evade in memory scanners, by periodically suspending this thread and changing all RWX pages to readonly. Additionally,
-the pages are 'encrypted'. After a while, the pages are restored and the thread is resumed.
+It aims to evade in memory scanners, by periodically suspending this thread and changing all RWX pages to readonly. Additionally, the pages are 'encrypted'. After a while, the pages are restored and the thread is resumed.
 
 ## Usage
 Change the following variables to your needs:

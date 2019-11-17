@@ -29,3 +29,5 @@ On the endpoint use your favourite dll loader to execute the export ***go***
 - The 'encryption' is not really an encryption. It's sole purpose is to confuse memory scanners.
 - Memfiddler does not support shellcode which does multithreaded-foo
 
+### Todo
+- The shellcode on the network is in cleartext. I should probably add something to change that
